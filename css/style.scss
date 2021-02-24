@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@mixin buttonDesign {
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	padding: 15px;
+	background-color: rgb(243, 207, 46);
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif;
+	color: rgb(115, 27, 27);
+	box-shadow: 0 0 10px rgb(0, 0, 0);
+	font-weight: 700;
+	
+	&:hover {
+		cursor: pointer;
+		box-shadow: 0 0 10px rgb(255, 255, 255);
+		border: none;
+		background-color: rgb(8, 143, 8);
+		transition: 0.6s;
+		color: white;
+	}
+}
+
+*,
+*::before,
+*::after{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2 {
+	font-family: 'Courgette', cursive;
+}
+
+#welcome {	
+	height: 100vh;
+	width: 100%;
+	display: flex;
+
+	background-image: url(../img/bg_1.jpg);
+	background-size: cover;
+ 	background-position: top;
+	background-repeat: no-repeat;
+
+	justify-content: center;
+	align-items: center;
+
+	h1 {
+		font-size: 4em;
+		color: #fff;
+		text-shadow: 8px 8px 8px #000000;
+		text-align: center;
+	}
+}
+
+#introduction {
+
+	display: flex;
+	flex-flow: column nowrap;
+
+	background-image: url(../img/bg_6v1.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+ 	background-position: top;
+	background-repeat: no-repeat;
+
+	justify-content: center;
+	align-items: center;
+	padding: 0%;
+
+	h2 {
+		margin: 2%;
+		font-size: 3em;
+		color: #fff;
+		text-shadow: 8px 8px 8px #000000;
+		text-align: center;
+	}
+
+	p {
+		margin: 0 0 2% 0;
+		font-size: 1.5em;
+		color: #fff;
+		text-shadow: 8px 8px 8px #000000;
+		text-align: justify;
+		width: 80%;
+	}
+}
+
+#menu {	
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+
+	background-image: url(../img/bg_5.jpg);
+	background-size: cover;
+ 	background-position: center;
+	background-repeat: no-repeat;
+
+	justify-content: flex-start;
+	align-items: center;
+	font-family: 'Italianno', cursive;
+
+	h2 {
+		width: 100%;
+		font-size: 3em;
+		color: #fff;
+		text-shadow: 8px 8px 8px #000000;
+		margin: 2% 0;
+		text-align: center;
+		
+	}
+
+	div#menu1 {
+		background-image: url(../img/menu1.png);
+		background-size: contain;
+		background-position: right;
+		background-repeat: no-repeat;
+		height: 600px;
+		min-width: 0;
+		width: 69.39px;
+	}
+
+	div#menu2 {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-image: url(../img/menu2.png);
+		background-size: 100% 100%;
+		background-position: left;
+		background-repeat: no-repeat;
+		
+		height: 600px;
+		width: 60%;
+
+		text-align: center;
+		font-size: 4em;
+
+		
+		#pizza {
+			font-family: 'Italianno', cursive;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			align-items: center;
+			padding: 1%;
+			font-size: .5em;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		font-weight: 700;
+
+		&:hover {
+			color: white;
+		}
+	}
+
+	div#btn {
+		width: 100%;
+		text-align: center;
+		margin: 2%;
+	}
+
+}
+
+.menu_items{
+	padding: 0.3em;
+}
+
+#reservation_btn, #reservation_btn2 {
+	@include buttonDesign;
+}
+
+footer {
+	background-size: cover;
+	background-color:rgb(115, 27, 27);
+	color: #a3a3a3;
+	justify-content: center;
+	text-align: center;
+	padding: 1%;
+}
+
+@media only screen and (max-width: 1190px) {
+	.menu_items {
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width: 520px) {
+	body {
+		font-size: 80%;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	body {
+		font-size: 60%;
+	}
+}
+@media only screen and (max-width: 320px) {
+	body {
+		font-size: 50%;
+	}
+}
+
+@media only screen and (max-width: 260px) {
+	body {
+		font-size: 40%;
+	}
+}
+
+@media only screen and (max-width: 200px) {
+	body {
+		font-size: 30%;
+	}
+}
+
+@media only screen and (max-width: 200px) {
+	body {
+		font-size: 30%;
+	}
+}
+
+@media only screen and (max-width: 173px) {
+	div#menu1 {
+		display: none;
+	}
+
+	#menu {
+		justify-content: center;
+	}
+
+	#reservation_btn, #reservation_btn2{
+		width: 50%;
+		font-size: 50%;
+		padding: 5%;
+	}
+}

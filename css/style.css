@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Courgette', cursive;
+}
+
+#welcome {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url(../img/bg_1.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#welcome h1 {
+  font-size: 4em;
+  color: #fff;
+  text-shadow: 8px 8px 8px #000000;
+  text-align: center;
+}
+
+#introduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  background-image: url(../img/bg_6v1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0%;
+}
+
+#introduction h2 {
+  margin: 2%;
+  font-size: 3em;
+  color: #fff;
+  text-shadow: 8px 8px 8px #000000;
+  text-align: center;
+}
+
+#introduction p {
+  margin: 0 0 2% 0;
+  font-size: 1.5em;
+  color: #fff;
+  text-shadow: 8px 8px 8px #000000;
+  text-align: justify;
+  width: 80%;
+}
+
+#menu {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  background-image: url(../img/bg_5.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Italianno', cursive;
+}
+
+#menu h2 {
+  width: 100%;
+  font-size: 3em;
+  color: #fff;
+  text-shadow: 8px 8px 8px #000000;
+  margin: 2% 0;
+  text-align: center;
+}
+
+#menu div#menu1 {
+  background-image: url(../img/menu1.png);
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 600px;
+  min-width: 0;
+  width: 69.39px;
+}
+
+#menu div#menu2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url(../img/menu2.png);
+  background-size: 100% 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 60%;
+  text-align: center;
+  font-size: 4em;
+}
+
+#menu div#menu2 #pizza {
+  font-family: 'Italianno', cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1%;
+  font-size: .5em;
+}
+
+#menu a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+#menu a:hover {
+  color: white;
+}
+
+#menu div#btn {
+  width: 100%;
+  text-align: center;
+  margin: 2%;
+}
+
+.menu_items {
+  padding: 0.3em;
+}
+
+#reservation_btn, #reservation_btn2 {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #f3cf2e;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  color: #731b1b;
+  -webkit-box-shadow: 0 0 10px black;
+          box-shadow: 0 0 10px black;
+  font-weight: 700;
+}
+
+#reservation_btn:hover, #reservation_btn2:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 10px white;
+          box-shadow: 0 0 10px white;
+  border: none;
+  background-color: #088f08;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  color: white;
+}
+
+footer {
+  background-size: cover;
+  background-color: #731b1b;
+  color: #a3a3a3;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 1%;
+}
+
+@media only screen and (max-width: 1190px) {
+  .menu_items {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  body {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  body {
+    font-size: 60%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  body {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 260px) {
+  body {
+    font-size: 40%;
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  body {
+    font-size: 30%;
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  body {
+    font-size: 30%;
+  }
+}
+
+@media only screen and (max-width: 173px) {
+  div#menu1 {
+    display: none;
+  }
+  #menu {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #reservation_btn, #reservation_btn2 {
+    width: 50%;
+    font-size: 50%;
+    padding: 5%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Frontend Pizzéria</title>
+	<link rel="shortcut icon" href="./img/pizza.png" type="image/png"/>
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/form_style.css">
+	<script src="./js/menu.js"></script>
+	<script src="./js/script.js"></script>
+
+</head>
+
+<body>
+
+	<div class="section" id="welcome">
+		<h1>Üdvözöljük<br>a Frontend Pizzéria honlapján!</h1>
+	</div>
+
+	<div class="section" id="introduction">
+		<h2>Bemutatkozás</h2>
+		<p>A név ne tévesszen meg senkit, nem kell profi frontendesnek lenni ahhoz, hogy valaki mediterrán hangulatban
+			kemencében sült
+			hamisítatlan olasz pizzát, vagy másféle finom mediterrán étkeket fogyasszon. Csupán felkerekednie, s el kell
+			sétálnia a Jókai utca 26. szám alatt található immár 17 éves múltra visszatekintő Frontend Pizzériába.
+		</p>
+		<p>
+			A hely hangulata minden látogató számára élmény, a nagyméretű falfestményeknek is köszönhetően szinte ott
+			érezzük	magunkat a Canal Granden, netán az Appeninek vadregényes tájain, akár egy középkori vár tövében. Itt mindenki,
+			család, egyén, gyerek és felnőtt, férfi és nő megtalálhatja azt, amit keres, romantikát, elbújást a világ szemei
+			elől, meghittséget, nyugalmat, de ugyanakkor unatkoznia sem kell az ízlésesen, a talján hangulathoz igazodón
+			berendezett helyiségekben. A hangulat persze nem elég, más is szükséges, hogy igazán jól érezzük magunkat.
+			Olyan finom étkeket fogyaszthatunk, amelyekre még sokáig emlékezni fogunk.
+		</p>
+		<p>
+			A pizzéria minden nap reggel 9:00 és 21:30 között fogadja vendégeit. <a href="./form.html"><button id="reservation_btn2" type="button">Asztalfoglalás</button></a>			
+		</p>
+		<p>
+			Mikulás napi Akció! December 6-án <mark>INGYEN PUFFIN</mark> jár a rendeléshez!
+		</p>
+		<p>
+			Ne feledje: a Frontend Pizzéria az a hely, ahol kellemes hangulatban adhatjuk át magunkat a gasztronómia
+			örömeinek, s mindezt elfogadható áron.
+		</p>
+	</div>
+
+	<div class="section" id="menu">
+		<h2>Étlap</h2>
+		<div id="menu1"></div>
+		<div id="menu2">Pizzáink
+			<div id="pizza"></div>
+			<div id="price"></div>
+		</div>
+		<div id="btn">
+			<a href="#form_container"><button id="reservation_btn" type="button">Asztalfoglalás</button></a>
+		</div>
+	</div>
+
+	<div id="form_container">
+		<h1>Foglaljon időpontot</h1>
+		<div id="form_div">
+			<form>
+				<label for="name">Név:</label> <br>
+				<input type="text" name="username" required> <br>
+				<div id="message1" class="messageDiv"></div>
+				<label for="email">Email cím:</label> <br>
+				<input type="email" name="email" required> <br>
+				<div id="message2" class="messageDiv"></div>
+				<div class="formflex">
+					<div class="formflex-item">
+						<label for="date">Dátum:</label> <br>
+						<input type="date" name="date" required> <br>
+						<div id="message3" class="messageDiv"></div>
+					</div>
+					<div class="formflex-item">
+						<label for="time">Időpont:</label> <br>
+						<input type="time" id="time_input" name="time" min="08:00" max="21:00" required>
+						<div id="message4" class="messageDiv"></div>
+					</div>
+					<div class="formflex-item">
+						<label for="persons">Vendégek száma:</label> <br>
+						<input type="number" id="number_input" min="1" max="100" name="persons" required>
+						<div id="message5" class="messageDiv"></div>
+					</div>
+				</div>
+				<button id="submit_Btn" type="button"><b>Lefoglalom az asztalt!</b></button>
+				<div id="message6" class="messageDiv"></div>	
+			</form>
+			<br>
+		</div>
+		<img src="./img/pizza2.png" alt=""></img> 
+	</div>
+
+	<footer>
+		<p>A pizzéria weboldalát a FRONTEND WARRIORS biztosítja.</p>
+		<p>Copyright © 2020</p>
+	</footer>
+</body>
+
+</html>

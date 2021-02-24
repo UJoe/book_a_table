@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Asztalfoglalás</title>
+	<link rel="shortcut icon" href="./img/pizza.png" type="image/png"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/form_style.css">
+	<script src="./js/script2.js"></script>
+</head>
+
+<body>
+	<div id="form_container"> 
+		<h1>Foglaljon időpontot</h1>
+		<div id="form_div">
+			<form>
+				<label for="name">Név:</label> <br>
+				<input type="text" name="username" required> <br>
+				<div id="message1" class="messageDiv"></div>
+				<label for="email">Email cím:</label> <br>
+				<input type="email" name="email" required> <br>
+				<div id="message2" class="messageDiv"></div>
+				<div class="formflex">
+					<div class="formflex-item">
+						<label for="date">Dátum:</label> <br>
+						<input type="date" name="date" required> <br>
+						<div id="message3" class="messageDiv"></div>
+					</div>
+					<div class="formflex-item">
+						<label for="time">Időpont:</label> <br>
+						<input type="time" id="time_input" name="time" min="08:00" max="21:00" required>
+						<div id="message4" class="messageDiv"></div>
+					</div>
+					<div class="formflex-item">
+						<label for="persons">Vendégek száma:</label> <br>
+						<input type="number" id="number_input" min="1" max="100" name="persons" required>
+						<div id="message5" class="messageDiv"></div>
+					</div>
+				</div>
+				<button id="submit_Btn" type="button"><b>Lefoglalom az asztalt!</b></button>
+				<div id="message6" class="messageDiv"></div>	
+			</form>
+			<br>
+		</div>
+		<img src="./img/pizza2.png" alt="">
+	</div>
+</body>
+
+</html>
