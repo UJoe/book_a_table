@@ -1,5 +1,3 @@
-window.addEventListener("load", _load);
-
 function _load() {
   const iName = document.querySelector("input[name='username']");
   const iEmail = document.querySelector("input[name='email']");
@@ -12,7 +10,7 @@ function _load() {
   iBtn.disabled = true;
   iTime.readOnly = true;
   // No need
-  //rForm.style.display = "none"; 
+  //rForm.style.display = "none";
   var nameOK = false;
   var emailOK = false;
   var dateOK = false;
@@ -27,7 +25,7 @@ function _load() {
   iNumber.addEventListener("blur", checkNumber);
   iBtn.addEventListener("click", logData);
   rBtn.addEventListener("click", reservation);
-  
+
   function message(x, text) {
     const m = document.getElementById("message" + x);
     m.className = "messageDiv appear";
@@ -84,8 +82,8 @@ function _load() {
   }
 
   function checkTime() {
-    let date = new Date()
-    let year = date.getFullYear()
+    let date = new Date();
+    let year = date.getFullYear();
     let month = date.getMonth();
     let day = date.getDate();
     let hour = date.getHours();
@@ -93,18 +91,24 @@ function _load() {
 
     let bookedTime = document.getElementById("time_input").value;
     let bookedHour, bookedMin;
-    bookedTime = bookedTime.split(':');
+    bookedTime = bookedTime.split(":");
     bookedHour = parseInt(bookedTime[0]);
     bookedMin = parseInt(bookedTime[1]);
 
     let bookedDate = document.querySelector("input[name='date']").value;
     let bookedYear, bookedMonth, bookedDay;
-    bookedDate = bookedDate.split('-');
+    bookedDate = bookedDate.split("-");
     bookedYear = parseInt(bookedDate[0]);
     bookedMonth = parseInt(bookedDate[1]) - 1;
     bookedDay = parseInt(bookedDate[2]);
 
-    if (bookedYear === year && bookedMonth === month && bookedDay === day && bookedHour < 21 && bookedHour >= 8) {
+    if (
+      bookedYear === year &&
+      bookedMonth === month &&
+      bookedDay === day &&
+      bookedHour < 21 &&
+      bookedHour >= 8
+    ) {
       if (bookedHour > hour + 1) {
         timeOK = true;
         checkSubmit();
@@ -112,7 +116,7 @@ function _load() {
         timeOK = true;
         checkSubmit();
       } else {
-        message(4, "Legalább 1 órával előre lehet csak asztalt foglalni.")
+        message(4, "Legalább 1 órával előre lehet csak asztalt foglalni.");
         timeOK = false;
         iBtn.disabled = true;
         iTime.focus();
@@ -120,11 +124,11 @@ function _load() {
     } else {
       let curDate = Math.floor(new Date() / (1000 * 60 * 60 * 24));
       let inpDate = Math.floor(new Date(iDate.value) / (1000 * 60 * 60 * 24));
-      if ((inpDate > curDate) && (bookedHour < 21 && bookedHour >= 8)) {
+      if (inpDate > curDate && bookedHour < 21 && bookedHour >= 8) {
         timeOK = true;
         checkSubmit();
       } else {
-        message(4, "A megadott időpont nem megfelelő.")
+        message(4, "A megadott időpont nem megfelelő.");
         timeOK = false;
         iBtn.disabled = true;
       }
@@ -132,12 +136,12 @@ function _load() {
   }
 
   function checkNumber() {
-    let guests = parseInt(iNumber.value)
+    let guests = parseInt(iNumber.value);
     if (guests > 0 && guests < 101) {
       numberOK = true;
       checkSubmit();
     } else {
-      message(5, "A számnak 1 és 100 között kell lennie.")
+      message(5, "A számnak 1 és 100 között kell lennie.");
       numberOK = false;
       iBtn.disabled = true;
       iNumber.focus();
@@ -150,7 +154,10 @@ function _load() {
     console.log("Dátum: " + iDate.value);
     console.log("Időpont: " + iTime.value);
     console.log("Vendégek száma: " + iNumber.value);
-    message(6, "<br><br>Várjuk szeretettel!<br>Az F12-vel megkapja visszaigazolását.")
+    message(
+      6,
+      "<br><br>Várjuk szeretettel!<br>Az F12-vel megkapja visszaigazolását."
+    );
     document.querySelector("form").reset();
     iBtn.disabled = true;
   }
@@ -160,7 +167,9 @@ function _load() {
       iBtn.disabled = false;
     }
   }
-/*   function reservation(){
+  /*   function reservation(){
     rForm.style.display = "block";
   } */
 }
+
+window.addEventListener("load", _load);
